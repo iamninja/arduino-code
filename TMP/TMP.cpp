@@ -3,14 +3,14 @@
 */
 
 #include "Arduino.h"
-#include "TMP36.h"
+#include "TMP.h"
 
-TMP36::TMP36(int pin)
+TMP::TMP(int pin)
 {
   _pin = pin;
 }
 
-float TMP36::readTemperatureC()
+float TMP::readTemperatureC()
 {
   int reading = analogRead(_pin);
   float voltage = (reading * 5.0) / 1024.0;
